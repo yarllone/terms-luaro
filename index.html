@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luaro — Terms of Use</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --surface: #f7f6f3;
+      --border: #e8e5e0;
+      --text: #2f2f2f;
+      --muted: #9b9a97;
+      --callout-bg: #f1f0ed;
+      --tag-bg: #efefef;
+      --link: #5b6d7c;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 40px 120px;
+    }
+
+    /* ── Header ── */
+    .page-header {
+      margin-bottom: 56px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--tag-bg);
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .app-badge svg { width: 14px; height: 14px; opacity: 0.6; }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 13.5px;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+
+    .meta-item { display: flex; align-items: center; gap: 6px; }
+    .meta-item svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+    /* ── Agreement banner ── */
+    .agreement-banner {
+      background: #fdf8f0;
+      border: 1px solid #e8dfc8;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 40px;
+      font-size: 13.5px;
+      color: #6b5c3e;
+      line-height: 1.6;
+    }
+
+    .agreement-banner strong {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #a08050;
+      margin-bottom: 6px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--callout-bg);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 48px;
+    }
+
+    .toc-title {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .toc ol { list-style: none; counter-reset: toc; padding: 0; }
+
+    .toc ol li {
+      counter-increment: toc;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 3px 0;
+      font-size: 14px;
+    }
+
+    .toc ol li::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 11px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      min-width: 22px;
+    }
+
+    .toc a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .toc a:hover { border-bottom-color: var(--border); }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 52px;
+      animation: fadeUp 0.4s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1)  { animation-delay: 0.05s; }
+    .section:nth-child(2)  { animation-delay: 0.09s; }
+    .section:nth-child(3)  { animation-delay: 0.13s; }
+    .section:nth-child(4)  { animation-delay: 0.17s; }
+    .section:nth-child(5)  { animation-delay: 0.21s; }
+    .section:nth-child(6)  { animation-delay: 0.25s; }
+    .section:nth-child(7)  { animation-delay: 0.29s; }
+    .section:nth-child(8)  { animation-delay: 0.33s; }
+    .section:nth-child(9)  { animation-delay: 0.37s; }
+    .section:nth-child(10) { animation-delay: 0.41s; }
+    .section:nth-child(11) { animation-delay: 0.45s; }
+    .section:nth-child(12) { animation-delay: 0.49s; }
+    .section:nth-child(13) { animation-delay: 0.53s; }
+    .section:nth-child(14) { animation-delay: 0.57s; }
+    .section:nth-child(15) { animation-delay: 0.61s; }
+    .section:nth-child(16) { animation-delay: 0.65s; }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 32px;
+    }
+
+    p {
+      font-size: 15.5px;
+      line-height: 1.75;
+      color: #4a4a4a;
+      margin-bottom: 14px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol.plain {
+      margin: 12px 0 14px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    ul li, ol.plain li {
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: #4a4a4a;
+      padding: 5px 0 5px 22px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 14px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--muted);
+    }
+
+    /* Subscription plans table */
+    .plans {
+      margin: 18px 0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .plan-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14.5px;
+      color: #4a4a4a;
+    }
+
+    .plan-row:last-child { border-bottom: none; }
+
+    .plan-icon {
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .plan-name { font-weight: 500; color: var(--text); }
+    .plan-desc { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+    /* Tech requirements */
+    .req-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .req-item {
+      background: var(--callout-bg);
+      border-radius: 6px;
+      padding: 12px 14px;
+    }
+
+    .req-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .req-value {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* Callout */
+    .callout {
+      background: var(--callout-bg);
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14.5px;
+      color: #4a4a4a;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .callout-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+    strong { font-weight: 500; color: var(--text); }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 52px 0;
+    }
+
+    /* ── Contact block ── */
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 32px;
+    }
+
+    .contact-block h2 { border-bottom: none; padding-bottom: 0; margin-bottom: 20px; }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      font-size: 14.5px;
+      color: #4a4a4a;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-row:last-child { border-bottom: none; }
+
+    .contact-label {
+      min-width: 90px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    a { color: var(--link); text-decoration: none; border-bottom: 1px solid currentColor; }
+    a:hover { opacity: 0.75; }
+
+    /* ── Footer ── */
+    .page-footer {
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .footer-brand {
+      font-family: 'Lora', serif;
+      font-weight: 500;
+      font-style: italic;
+      color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      .page-wrapper { padding: 48px 24px 80px; }
+      h1 { font-size: 2rem; }
+      .req-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <header class="page-header">
+      <div class="app-badge">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="12" height="12" rx="3" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M5 8h6M5 5.5h4M5 10.5h3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        Luaro · iOS App
+      </div>
+      <h1>Terms of Use</h1>
+      <div class="meta">
+        <span class="meta-item">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M5 1.5v3M11 1.5v3M2 7h12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          Last updated: April 20, 2026
+        </span>
+        <span class="meta-item">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M3 13c0-2.76 2.24-5 5-5s5 2.24 5 5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          Yaroslav Lishchynskyi
+        </span>
+      </div>
+    </header>
+
+    <div class="section">
+      <p>These Terms of Use ("Terms") govern your use of the mobile application Luaro (the "App", “Application”, “Services”, “Service”), operated by Yaroslav Lishchynskyi (“the developer”, "we", "us", or "our"). These Terms constitute the entire agreement between the developer and you (“user”).</p>
+    </div>
+
+    <!-- Agreement banner -->
+    <div class="agreement-banner">
+      <strong>⚠ Please read carefully</strong>
+      By downloading and using the Service, you acknowledge that you have read, understood, and agreed to be bound by all of these Terms. If you do not agree, you must discontinue use immediately.
+    </div>
+
+    <!-- TOC -->
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#ip">Intellectual Property Rights</a></li>
+        <li><a href="#conduct">User Conduct &amp; Prohibited Activities</a></li>
+        <li><a href="#payments">Payments &amp; Subscriptions</a></li>
+        <li><a href="#warranties">Disclaimer of Warranties</a></li>
+        <li><a href="#liability">Limitation of Liability</a></li>
+        <li><a href="#advice">No Professional Advice</a></li>
+        <li><a href="#force">Force Majeure</a></li>
+        <li><a href="#user-responsibility">User Responsibility for Restrictions</a></li>
+        <li><a href="#third-party">Third-Party Services &amp; Links</a></li>
+        <li><a href="#permissions">Permissions &amp; System-Level Access</a></li>
+        <li><a href="#requirements">Technical Requirements</a></li>
+        <li><a href="#law">Governing Law</a></li>
+        <li><a href="#severability">Severability</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#updates">App Updates &amp; Changes</a></li>
+        <li><a href="#contact">Contact Information</a></li>
+      </ol>
+    </nav>
+
+    <!-- Sections -->
+    <main>
+
+      <div class="section" id="ip">
+        <span class="section-number">01</span>
+        <h2>Intellectual Property Rights</h2>
+        <p>The Application — including its source code, design, user interface, text, and overall structure — is owned by Yaroslav Lishchynskyi and is protected by applicable copyright and intellectual property laws.</p>
+        <p>You are granted a limited, non-exclusive, non-transferable, revocable license to use the Application for personal, non-commercial purposes. You are not permitted to:</p>
+        <ul>
+          <li>Copy, modify, or create derivative works of the Application.</li>
+          <li>Reverse engineer, decompile, or attempt to extract the source code.</li>
+          <li>Sell, sublicense, or otherwise exploit the Application or any part of it without prior written permission.</li>
+        </ul>
+        <p>All trademarks, service marks, and trade names used in the Application are the property of their respective owners. The name, logo, and branding of the Application are protected under applicable laws.</p>
+      </div>
+
+      <div class="section" id="conduct">
+        <span class="section-number">02</span>
+        <h2>User Conduct &amp; Prohibited Activities</h2>
+        <p>By using the Application, you agree not to engage in any of the following:</p>
+        <ul>
+          <li><strong>Illegal Use:</strong> Using the Application for any illegal or unauthorized purpose, or in violation of local, national, or international laws.</li>
+          <li><strong>Interference:</strong> Disrupting the integrity or performance of the Application, or attempting to gain unauthorized access to our systems or related networks.</li>
+          <li><strong>Harmful Software:</strong> Uploading, transmitting, or distributing viruses, malware, or any software intended to damage or alter a computer system or data.</li>
+          <li><strong>Automated Access:</strong> Using bots, crawlers, or scripts to access the Application or extract data without express written permission.</li>
+        </ul>
+        <div class="callout">
+          <span class="callout-icon">⚠️</span>
+          <span>Any violation of these rules may result in suspension or termination of access, to the extent permitted by applicable law.</span>
+        </div>
+      </div>
+
+      <div class="section" id="payments">
+        <span class="section-number">03</span>
+        <h2>Payments &amp; Subscriptions</h2>
+        <p>Some features require a paid subscription. All purchases are processed through Apple's App Store and are subject to Apple's payment terms.</p>
+        <ul>
+          <li>Subscriptions renew automatically unless canceled at least 24 hours before the end of the current billing period.</li>
+          <li>You can manage or cancel your subscription at any time through your Apple ID account settings.</li>
+          <li>All payments are non-refundable, except as required by applicable law or Apple policies. The developer does not control billing or refunds — contact Apple Support directly for refund requests.</li>
+        </ul>
+
+        <p>We currently offer the following plans:</p>
+        <div class="plans">
+          <div class="plan-row">
+            <span class="plan-icon">📅</span>
+            <div>
+              <div class="plan-name">Monthly Luaro Pro</div>
+              <div class="plan-desc">Billed every month</div>
+            </div>
+          </div>
+          <div class="plan-row">
+            <span class="plan-icon">🗓️</span>
+            <div>
+              <div class="plan-name">Annual Luaro Pro</div>
+              <div class="plan-desc">Billed every year</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <span class="callout-icon">🎁</span>
+          <span>We offer a <strong>7-day free trial</strong> for certain plans, available once per Apple ID. If you do not cancel at least 24 hours before the trial ends, your subscription will automatically renew at the full price.</span>
+        </div>
+
+        <p>Pricing is displayed in the Application and may vary by region.</p>
+      </div>
+
+      <div class="section" id="warranties">
+        <span class="section-number">04</span>
+        <h2>Disclaimer of Warranties</h2>
+        <p>The Application is provided on an "as is" and "as available" basis, without warranties of any kind, whether express or implied. To the fullest extent permitted by applicable law, the developer disclaims all warranties, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+        <p>We do not warrant that the Application will be uninterrupted, error-free, secure, or bug-free, nor do we guarantee that defects will be corrected.</p>
+        <div class="callout">
+          <span class="callout-icon">ℹ️</span>
+          <span>The Application is designed to support users in managing their digital habits. We do not guarantee any specific outcomes — such as reduced screen time, improved focus, or behavioral change. Such results depend on factors outside our control, including individual behavior and consistency of use.</span>
+        </div>
+      </div>
+
+      <div class="section" id="liability">
+        <span class="section-number">05</span>
+        <h2>Limitation of Liability</h2>
+        <p>To the fullest extent permitted by applicable law, the developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages — including loss of profits, loss of data, or other intangible losses — arising from your use of or inability to use the Application.</p>
+        <ul>
+          <li>The developer is not liable for damages resulting from interruptions, errors, bugs, or security vulnerabilities.</li>
+          <li>The developer is not responsible for outcomes related to user behavior, including failure to reduce screen time or change habits.</li>
+          <li>The developer is not liable for errors caused by iOS updates or changes to Apple's Screen Time API or Family Controls policy.</li>
+          <li>The developer is not responsible for consequences resulting from restrictions you have configured yourself.</li>
+        </ul>
+        <p>In no event shall the developer's total liability exceed the amount you have paid (if any) for access to the Application within the twelve (12) months preceding the claim. Some jurisdictions do not allow certain liability exclusions, so some limitations may not apply to you.</p>
+      </div>
+
+      <div class="section" id="advice">
+        <span class="section-number">06</span>
+        <h2>No Professional Advice</h2>
+        <p>The Application is a productivity and time-management tool. By using it, you acknowledge that:</p>
+        <ul>
+          <li><strong>Not a Medical Service:</strong> The Application does not provide medical, psychological, or health advice, diagnosis, or treatment.</li>
+          <li><strong>Informational Only:</strong> Any information, suggestions, or features (such as screen time statistics or focus tips) are for informational purposes only.</li>
+          <li><strong>No Professional Relationship:</strong> Your use of the Application does not create any professional relationship between you and the developer.</li>
+          <li><strong>Consult a Professional:</strong> If you are experiencing severe symptoms of digital addiction, anxiety, or other health issues, seek advice from a qualified professional.</li>
+          <li><strong>Individual Responsibility:</strong> You are solely responsible for how you interpret and use the information provided by the Application.</li>
+        </ul>
+      </div>
+
+      <div class="section" id="force">
+        <span class="section-number">07</span>
+        <h2>Force Majeure</h2>
+        <p>The developer shall not be liable for any failure or delay in performing obligations due to causes beyond our reasonable control, including:</p>
+        <ul>
+          <li>Acts of God, natural disasters, or severe weather.</li>
+          <li>War, terrorism, civil unrest, or government action.</li>
+          <li>Pandemics or public health emergencies.</li>
+          <li>Failures of third-party services or infrastructure (including Apple's services).</li>
+          <li>Changes to iOS, App Store policies, or Apple's APIs.</li>
+          <li>Internet or telecommunications failures.</li>
+        </ul>
+      </div>
+
+      <div class="section" id="user-responsibility">
+        <span class="section-number">08</span>
+        <h2>User Responsibility for Restrictions</h2>
+        <p>The Application allows you to configure restrictions and unlocking conditions to limit access to selected apps or features. You are solely responsible for choosing and managing these settings.</p>
+        <div class="callout">
+          <span class="callout-icon">🔧</span>
+          <span>The developer shall not be liable for any inconvenience or loss of access resulting from restrictions or unlocking conditions that you have configured. All restrictions are user-controlled and can be modified through available system settings or within the Application.</span>
+        </div>
+      </div>
+
+      <div class="section" id="third-party">
+        <span class="section-number">09</span>
+        <h2>Third-Party Services &amp; Links</h2>
+        <p>The Application may contain links to third-party websites or services not owned or controlled by the developer. The developer assumes no responsibility for the content, privacy policies, or practices of any third-party service. Inclusion of any link does not imply endorsement.</p>
+        <p>You access third-party websites and services at your own risk and should review their respective terms and privacy policies.</p>
+      </div>
+
+      <div class="section" id="permissions">
+        <span class="section-number">10</span>
+        <h2>Permissions &amp; System-Level Access</h2>
+        <p>To provide its core functionality, the Application requires authorization to access screen time–related features through system-level APIs. By using the Application, you agree to grant the necessary permissions when prompted.</p>
+        <p>If you deny, restrict, or later revoke these permissions, some or all features may become unavailable. The Application's functionality is inherently dependent on system frameworks managed by Apple Inc. and may be affected by changes to the operating system, device settings, or user permissions.</p>
+      </div>
+
+      <div class="section" id="requirements">
+        <span class="section-number">11</span>
+        <h2>Technical Requirements</h2>
+        <p>The Application requires a compatible Apple device and a supported version of iOS to function properly. Minimum requirements:</p>
+        <div class="req-grid">
+          <div class="req-item">
+            <div class="req-label">Device</div>
+            <div class="req-value">iPhone XR or newer, iPad compatible</div>
+          </div>
+          <div class="req-item">
+            <div class="req-label">OS Version</div>
+            <div class="req-value">iOS 17.0 or later</div>
+          </div>
+          <div class="req-item">
+            <div class="req-label">Storage</div>
+            <div class="req-value">~50 MB available space</div>
+          </div>
+          <div class="req-item">
+            <div class="req-label">Internet</div>
+            <div class="req-value">Required for download &amp; purchases; not required for core features</div>
+          </div>
+        </div>
+        <p>The Application may not function properly on beta versions of iOS or jailbroken devices. We do not provide support for unsupported configurations.</p>
+      </div>
+
+      <div class="section" id="law">
+        <span class="section-number">12</span>
+        <h2>Governing Law</h2>
+        <p>These Terms shall be governed by the laws of the Republic of Poland, without regard to its conflict of law principles. Any disputes shall be subject to the jurisdiction of the competent courts of the Republic of Poland, unless otherwise required by applicable consumer protection laws.</p>
+        <div class="callout">
+          <span class="callout-icon">🇪🇺</span>
+          <span>If you are a consumer residing in the European Union, you may also benefit from any mandatory provisions of the law of the country in which you reside.</span>
+        </div>
+      </div>
+
+      <div class="section" id="severability">
+        <span class="section-number">13</span>
+        <h2>Severability</h2>
+        <p>If any provision of these Terms is held to be invalid, illegal, or unenforceable, that provision shall be limited or eliminated to the minimum extent necessary. The remaining provisions will remain in full force and effect. Failure of the developer to enforce any right or provision will not be deemed a waiver of such right or provision.</p>
+      </div>
+
+      <div class="section" id="privacy">
+        <span class="section-number">14</span>
+        <h2>Privacy</h2>
+        <p>Your use of the Application is also governed by our Privacy Policy, available at <a href="https://luaro.privacy.app" target="_blank" rel="noopener">luaro.privacy.app</a>.</p>
+      </div>
+
+      <div class="section" id="updates">
+        <span class="section-number">15</span>
+        <h2>App Updates &amp; Changes</h2>
+        <p>We constantly work to improve the Application and may provide updates, bug fixes, or new features from time to time.</p>
+        <ul>
+          <li><strong>Automatic Updates:</strong> Depending on your device settings, the Application may automatically download and install updates.</li>
+          <li><strong>Changes to Functionality:</strong> We reserve the right to modify, suspend, or discontinue any part of the Application at any time, with or without notice.</li>
+          <li><strong>Compatibility:</strong> Some updates may require you to update your device's operating system or hardware. We do not guarantee compatibility with all devices or OS versions.</li>
+          <li><strong>Changes to These Terms:</strong> We may update these Terms at any time. Your continued use after changes take effect constitutes acceptance of the new Terms. If you do not agree, you must stop using the Application immediately.</li>
+        </ul>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="section contact-block" id="contact">
+        <span class="section-number">16</span>
+        <h2>Contact Information</h2>
+        <div class="contact-row">
+          <span class="contact-label">Email</span>
+          <a href="mailto:support@luaro.app">support@luaro.app</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Developer</span>
+          <span>Yaroslav Lishchynskyi</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">App</span>
+          <span>Luaro</span>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <span class="footer-brand">Luaro</span>
+      <span>© 2026 Yaroslav Lishchynskyi · All rights reserved</span>
+    </footer>
+
+  </div>
+</body>
+</html>
